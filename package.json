@@ -1,0 +1,19 @@
+{
+  "name": "readbooks",
+  "slug": "Read Books",
+  "version": "1.0.0",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron .",
+    "build": "electron-builder",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "Read Books (https://github.com/joaoEnrique/)",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "electron": "^36.2.1",
+    "electron-builder": "^26.0.12"
+  }
+}

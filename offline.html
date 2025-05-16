@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Paçoca</title>
+    <link rel="stylesheet" href="assets/css/style.min.css">
+    <link rel="stylesheet" href="assets/bootstrap/5.3.3/css/bootstrap.min.css">
+    <script lazy="loading" src="assets/feather-icons/4.29.2/feather.min.js"></script> <!-- father icon -->
+</head>
+<body>
+    <div class="container container-404">
+        <div class="">
+            <h1 style="text-align: center;">Você está sem internet</h1>
+            <p class="text-center">Conecte-se e abra o Paçoca Novamente</p>
+        </div>
+        <img src="assets/img/server.png" style="margin-top: -200px" class="img-page-not-found" srcset="">
+    </div>
+
+
+
+    <!-- MENU -->
+    <nav class="navbar navbar-pc navbar-dark navbar-expand-md fixed-top" style=" padding-left:100px;padding-right: 100px;    margin: 0 20px 20px; border-radius: 15px">
+        <div class="container-fluid">
+        <a class="navbar-brand" href="#"><img alt="Logo do Paçoca" src="assets/pacoca.png" style="height: 50px"/></a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                <li class="nav-item">
+                    <form class="d-flex" method="GET" action="#" role="search" style="margin: 0;">
+                        <input type="hidden" value="1" name="page">
+                        <input type="hidden" value="3" name="limitePost">
+                        <input type="hidden" value="10" name="limiteUsuarios">
+                        <input value="" id="input-search" class="form-control me-2" type="search" name="search" placeholder="Pesquisar" aria-label="Search" required>
+                        <button class="icon-menu-dark btn btn-outline-blue" type="submit">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-search-heart" viewBox="0 0 16 16">
+                                <path d="M6.5 4.482c1.664-1.673 5.825 1.254 0 5.018-5.825-3.764-1.664-6.69 0-5.018Z"/>
+                                <path d="M13 6.5a6.471 6.471 0 0 1-1.258 3.844c.04.03.078.062.115.098l3.85 3.85a1 1 0 0 1-1.414 1.415l-3.85-3.85a1.007 1.007 0 0 1-.1-.115h.002A6.5 6.5 0 1 1 13 6.5ZM6.5 12a5.5 5.5 0 1 0 0-11 5.5 5.5 0 0 0 0 11Z"/>
+                            </svg>
+                        </button>
+                    </form>
+                </li>
+    
+            </ul>
+    
+            <div class="d-flex" role="search" style="align-items:center; margin-right: 50px;">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0" style="gap: 20px!important">
+                        <li class="nav-item">
+                            <a class="nav-link position-relative" href="#">
+                                <i class="menu-father-icon icon-menu-dark" style="color: white; opacity: .6" data-feather="log-in"></i>
+                            </a>
+                        </li>
+                            <a data-bs-toggle="offcanvas" data-bs-target="#offcanvasWithBothOptions" aria-controls="offcanvasWithBothOptions" class="nav-link" href="#" style="margin-left: -18px;">
+                                <i class="menu-father-icon icon-menu-dark" style="color: white; opacity: .6" data-feather="menu"></i>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </nav>
+    
+    
+    
+
+    <!-- MENU CEL -->
+    <nav class="navbar @if(!Request::is('chat') && !Request::is('chat.new')) navbar-cel @endif navbar-dark fixed-bottom" style="border-radius: 15px; margin: 0 auto; max-width: 700px; bottom:10px; left: 10px; right: 10px">
+        <div class="container-fluid" style="padding: 0;">
+            <div class="row" style="width: 100%; margin: 0;">
+                <div class="col">
+                    <ul class="navbar-nav me-auto mb-lg-0" style="flex-direction: row; justify-content: space-evenly; width: 100%;">
+                        <li>
+                            <a class="nav-link" href="#" style="margin-left: -18px;" aria-label="Ir para o Feed">
+                                <img src="assets/icon.png" alt="Logo do Paçoca" height="37" width="37"/>
+                            </a>
+                        </li>
+                           
+    
+                            <li class="nav-item  @if(Request::path() === 'search') active @endif">
+                                <a class="nav-link" href="#" aria-label="Ir para tela de pesquisa">
+                                        <svg style="opacity: 0.5" xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="icon-menu-dark icon-menu bi bi-search-heart" viewBox="0 0 16 16">
+                                            <path d="M6.5 4.482c1.664-1.673 5.825 1.254 0 5.018-5.825-3.764-1.664-6.69 0-5.018Z"/>
+                                            <path d="M13 6.5a6.471 6.471 0 0 1-1.258 3.844c.04.03.078.062.115.098l3.85 3.85a1 1 0 0 1-1.414 1.415l-3.85-3.85a1.007 1.007 0 0 1-.1-.115h.002A6.5 6.5 0 1 1 13 6.5ZM6.5 12a5.5 5.5 0 1 0 0-11 5.5 5.5 0 0 0 0 11Z"/>
+                                        </svg>
+                                </a>
+                            </li>
+    
+                            <li class="nav-item">
+                                <a aria-label="Ir para notificações" class="nav-link position-relative" href="#">
+                                    <svg style="opacity: 0.5" xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="icon-menu-dark icon-menu bi bi-heart" viewBox="0 0 16 16">
+                                        <path d="m8 2.748-.717-.737C5.6.281 2.514.878 1.4 3.053c-.523 1.023-.641 2.5.314 4.385.92 1.815 2.834 3.989 6.286 6.357 3.452-2.368 5.365-4.542 6.286-6.357.955-1.886.838-3.362.314-4.385C13.486.878 10.4.28 8.717 2.01L8 2.748zM8 15C-7.333 4.868 3.279-3.04 7.824 1.143c.06.055.119.112.176.171a3.12 3.12 0 0 1 .176-.17C12.72-3.042 23.333 4.867 8 15z"/>
+                                    </svg>
+                                </a>
+                            </li>
+
+                            <li class="nav-item">
+                                <a aria-label="Ir para tela de login" class="nav-link position-relative" href="#">
+                                    <i class="menu-father-icon icon-menu-dark" style="color: white; opacity: .6" data-feather="log-in"></i>
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a aria-label="abrir menu" data-bs-toggle="offcanvas" data-bs-target="#offcanvasWithBothOptions" aria-controls="offcanvasWithBothOptions" class="nav-link" href="#" style="margin-left: -18px;">
+                                    <i class="menu-father-icon icon-menu-dark" style="color: white; opacity: .6" data-feather="menu"></i>
+                                </a>
+                            </li>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </nav>
+        <!-- <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script> -->
+        <!-- <script defer src="{{asset('js/app.js?t=' . time())}}"></script> -->
+    </form>
+    </div>
+
+    <script>
+        feather.replace();
+    </script>
+    
+</body>
+</html>
