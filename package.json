@@ -10,7 +10,32 @@
   },
   "keywords": [],
   "author": "Read Books (https://github.com/joaoEnrique/)",
-  
+  "win": {
+      "icon": "assets/icon.png",
+      "executableName": "readbooks",
+      "requestedExecutionLevel": "asInvoker" ,
+      "target": [
+        {
+          "target": "appx",
+          "arch": [
+            "x64",
+            "ia32"
+          ]
+        }
+      ]
+    },
+    "mac": {
+      "target": "dmg"
+    },
+    "linux": {
+      "icon": "assets/icon.png",
+      "target": [
+        "AppImage",
+        "deb",
+        "snap"
+      ],
+      "category": "Utility"
+  },
   "license": "ISC",
   "description": "Sistema de leitura de livros",
   "devDependencies": {
