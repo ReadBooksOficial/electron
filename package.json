@@ -11,6 +11,11 @@
   "keywords": [],
   "author": "Read Books (https://github.com/joaoEnrique/)",
   "win": {
+      "signtoolOptions": {
+        "certificateFile": "readbooks_cert.pfx",
+        "certificatePassword": "${CERT_PASSWORD}",
+        "publisherName": "Read Books"
+      },
       "icon": "assets/icon.png",
       "executableName": "readbooks",
       "requestedExecutionLevel": "asInvoker" ,
