@@ -10,9 +10,10 @@
   },
   "keywords": [],
   "author": "Read Books (https://github.com/joaoEnrique/)",
+  
   "license": "ISC",
-  "description": "",
-  "dependencies": {
+  "description": "Sistema de leitura de livros",
+  "devDependencies": {
     "electron": "^36.2.1",
     "electron-builder": "^26.0.12"
   }
